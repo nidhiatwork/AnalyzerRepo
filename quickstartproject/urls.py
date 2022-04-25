@@ -13,10 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import include, path
+from django.conf.urls import include, url
+import VennDiagApp.views
+
+
 
 urlpatterns = [
-    path('', include('hello_azure.urls')),
-    path('admin/', admin.site.urls),
+    url(r'^$', VennDiagApp.views.index, name='index'),
+    url(r'^home$', VennDiagApp.views.index, name='home'),
+    url(r'^analyzer', VennDiagApp.views.analyzer, name='analyzer'),
 ]

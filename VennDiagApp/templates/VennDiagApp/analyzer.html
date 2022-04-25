@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h3>Values which are common to both sets of data:</h3>
+        {% for item in common %}
+        <p>{{item}}</p>
+        {% endfor %}
+        <h3>Values which are in first set but not in second set of data:</h3>
+        {% for item in InFirst_notInSecond %}
+        <p>{{item}}</p>
+        {% endfor %}
+        <h3>Values which are in second set but not in first set of data:</h3>
+        {% for item in InSecond_notInFirst %}
+        <p>{{item}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

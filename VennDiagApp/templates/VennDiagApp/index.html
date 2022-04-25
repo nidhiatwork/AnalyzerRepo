@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <strong>{{ message }}</strong>{{ content }}
+    <p>"Enter Data A and Data B"</p>
+    <form method="post" action="analyzer" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="DataA" />
+        <input type="file" name="DataB" />
+        <input type="submit" value="Analyze" />
+    </form>
+</body>
+</html>
